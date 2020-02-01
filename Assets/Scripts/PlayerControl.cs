@@ -20,8 +20,9 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
-        //transform.rotation = Vector3.Lerp(transform.rotation,newRotation,speed*Time.deltaTime);
-        transform.eulerAngles = newRotation;
+        transform.eulerAngles
+            = Vector3.Lerp(transform.eulerAngles,newRotation,speed*Time.deltaTime);
+        //transform.eulerAngles = newRotation;
         transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
     }
     public void GoTo(Vector2 newPos)
@@ -45,7 +46,8 @@ public class PlayerControl : MonoBehaviour
         else if (dir == Vector2.right + Vector2.down)
             deg = 135;
 
-
+        deg += 360;
+        deg %= 360;
         Debug.Log(deg);
         newRotation = transform.eulerAngles;
         newRotation.y = deg;
