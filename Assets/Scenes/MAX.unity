@@ -296,7 +296,7 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   height: 1
   speed: 3
-  newRotation: {x: 0, y: 0, z: 0}
+  rotationSpeed: 2.5
 --- !u!1001 &1036773230708349035
 PrefabInstance:
   m_ObjectHideFlags: 0

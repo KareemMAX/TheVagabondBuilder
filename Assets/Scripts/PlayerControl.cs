@@ -1,33 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
     public Vector2 position = Vector2.zero;
     public int height = 1;
-    public float speed=3;
-    private float deg=0;
+    public float speed = 3;
+    public float rotationSpeed = 2.5f;
+
     private Vector3 newPosition;
-    public Vector3 newRotation;
+    private Vector3 newRotation;
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         transform.position = new Vector3(position.x, height - 0.5f, position.y);
         newPosition = transform.position;
         newRotation = transform.eulerAngles;
-        
+        animator = GetComponent<Animator>();
     }
+
     void Update()
     {
-        transform.eulerAngles
-            = Vector3.Lerp(transform.eulerAngles,newRotation,speed*Time.deltaTime);
-        //transform.eulerAngles = newRotation;
-        transform.position = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+        transform.eulerAngles = Vector3.Lerp(transform.eulerAngles, newRotation, speed * Time.deltaTime * rotationSpeed);
+        var nextPosition = Vector3.MoveTowards(transform.position, newPosition, speed * Time.deltaTime);
+        var currentSpeed = (nextPosition - transform.position).magnitude / Time.deltaTime;
+        animator.SetFloat("Speed", currentSpeed);
+
+        transform.position = nextPosition;
     }
+
     public void GoTo(Vector2 newPos)
     {
-       // newRotation.y += Vector2.Angle(position-newPos,Vector2.right);
+        float deg = 0;
         var dir = newPos - position;
         if (dir == Vector2.up)
             deg = 0;
@@ -56,5 +61,5 @@ public class PlayerControl : MonoBehaviour
         newPosition = new Vector3(newPos.x, height - 0.5f, newPos.y);
         position = newPos;
     }
-    
+
 }
