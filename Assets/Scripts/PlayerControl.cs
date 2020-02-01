@@ -53,7 +53,7 @@ public class PlayerControl : MonoBehaviour
 
         deg += 360;
         deg %= 360;
-        Debug.Log(deg);
+
         newRotation = transform.eulerAngles;
         newRotation.y = deg;
 

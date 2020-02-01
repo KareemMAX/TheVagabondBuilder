@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Path : MonoBehaviour
 {
@@ -17,32 +15,26 @@ public class Path : MonoBehaviour
         player = FindObjectOfType<PlayerControl>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     bool isNeighbour()
     {
         return (new Vector2(transform.position.x, transform.position.z) - player.position).magnitude <= Mathf.Sqrt(2);
     }
+
     void OnMouseEnter()
     {
         if (isNeighbour())
             meshRenderer.material = highlightedMaterial;
-        
-
     }
 
     void OnMouseExit()
     {
         meshRenderer.material = originalMat;
     }
+
     private void OnMouseDown()
     {
         if (isNeighbour())
             player.GoTo(new Vector2(transform.position.x, transform.position.z));
-        
     }
 
 }
