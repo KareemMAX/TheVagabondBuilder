@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlackCoinHandler : MonoBehaviour
+public class GoldenHammerHandler : MonoBehaviour
 {
     [SerializeField] float amount;
     private void OnTriggerEnter(Collider other)
@@ -12,9 +12,13 @@ public class BlackCoinHandler : MonoBehaviour
             PlayerScore player = other.GetComponent<PlayerScore>();
             if (player != null)
             {
-                player.BlackCoin += amount;
+                player.GoldHammer += amount;
                 Destroy(gameObject);
             }
+        }
+        else if (other.tag == "Bridge")
+        {
+            Destroy(gameObject);
         }
     }
 }

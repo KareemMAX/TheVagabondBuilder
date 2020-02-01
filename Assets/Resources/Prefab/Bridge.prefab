@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4251901193069048610
+--- !u!1 &8755854061204742322
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1696362019729504659}
-  - component: {fileID: 6451609426312591655}
-  - component: {fileID: 1632250774751884360}
-  - component: {fileID: 6999006624571662131}
-  - component: {fileID: 1947904004607304533}
+  - component: {fileID: 7557356057563807726}
+  - component: {fileID: 6163571380377853232}
+  - component: {fileID: 6040689779656806658}
+  - component: {fileID: 2048306214515032838}
+  - component: {fileID: 9105834315139023269}
+  - component: {fileID: 4513694376801606726}
   m_Layer: 0
-  m_Name: BlackCoin
-  m_TagString: Untagged
+  m_Name: Bridge
+  m_TagString: Bridge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1696362019729504659
+--- !u!4 &7557356057563807726
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251901193069048610}
-  m_LocalRotation: {x: -0.15038896, y: -0.6691745, z: -0.19601491, w: -0.70083296}
-  m_LocalPosition: {x: 12.3, y: 2.28, z: 10.13}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 8755854061204742322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -2.9540002, y: 86.603004, z: -331.533}
---- !u!33 &6451609426312591655
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6163571380377853232
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251901193069048610}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1632250774751884360
+  m_GameObject: {fileID: 8755854061204742322}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6040689779656806658
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251901193069048610}
+  m_GameObject: {fileID: 8755854061204742322}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,30 +80,47 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &6999006624571662131
-CapsuleCollider:
+--- !u!65 &2048306214515032838
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251901193069048610}
+  m_GameObject: {fileID: 8755854061204742322}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1947904004607304533
+--- !u!54 &9105834315139023269
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755854061204742322}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4513694376801606726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251901193069048610}
+  m_GameObject: {fileID: 8755854061204742322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83794c0a6ee82c549b6f9ee636cea5c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 5235f3aaa2a3abf43ac59038b3260593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0
+  highlightedMaterial: {fileID: 2100000, guid: 8ed12db9693c52143a81128ebd90b844, type: 2}
+  bridged: 1
+  bridgeHeight: 0.5

@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
     public int height = 1;
     public float speed = 3;
     public float rotationSpeed = 2.5f;
+    public bool dead;
 
     private Vector3 newPosition;
     private Vector3 newRotation;
@@ -32,6 +33,7 @@ public class PlayerControl : MonoBehaviour
 
     public void GoTo(Vector2 newPos)
     {
+        if (dead) return;
         float deg = 0;
         var dir = newPos - position;
         if (dir == Vector2.up)
@@ -50,7 +52,8 @@ public class PlayerControl : MonoBehaviour
             deg = -135;
         else if (dir == Vector2.right + Vector2.down)
             deg = 135;
-
+        else
+            deg = transform.eulerAngles.y;
         deg += 360;
         deg %= 360;
 

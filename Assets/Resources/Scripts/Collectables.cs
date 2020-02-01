@@ -5,8 +5,8 @@ using UnityEngine;
 public class Collectables : MonoBehaviour
 {
     public float rotationSpeed = 50f;
-    public float hoverDis = 0.02f;
-    public float hoverSpeed = 0.5f;
+    public float hoverDis = 0.002f;
+    public float hoverSpeed = 0.25f;
 
     // Update is called once per frame
     void Update()

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8024842084715470579}
   - component: {fileID: 114746819959911540}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,3 +105,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedMaterial: {fileID: 2100000, guid: 8ed12db9693c52143a81128ebd90b844, type: 2}
+  bridged: 0
+  bridgeHeight: 0.6
