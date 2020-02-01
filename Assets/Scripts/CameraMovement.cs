@@ -33,7 +33,7 @@ public class CameraMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        var newSize = camera.orthographicSize - Input.mouseScrollDelta.y;
+        var newSize = camera.orthographicSize - Input.GetAxis("Zoom");
 
         camera.orthographicSize = Mathf.Clamp(newSize, minZoom, maxZoom);
     }
