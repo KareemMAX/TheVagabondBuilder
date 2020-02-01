@@ -224,7 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackCoin: 0
   goldHammer: 0
-  bridge: 0
+  totalHammers: 3
+  bridge: 2
 --- !u!54 &229041721565951251
 Rigidbody:
   m_ObjectHideFlags: 0
