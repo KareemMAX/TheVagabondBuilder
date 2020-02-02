@@ -23,7 +23,7 @@ public class Path : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (!player.dead)
+        if (!player.Dead)
             if (isNeighbour())
                 meshRenderer.material = highlightedMaterial;
     }

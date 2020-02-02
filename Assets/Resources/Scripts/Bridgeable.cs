@@ -32,7 +32,7 @@ public class Bridgeable : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if (!player.dead && path == null)
+        if (!player.Dead && path == null)
             if (isNeighbour())
                 meshRenderer.material = highlightedMaterial;
     }

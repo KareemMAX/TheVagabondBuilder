@@ -15,7 +15,7 @@ public class Trap : MonoBehaviour
     {
         if(collider.gameObject.tag == "Player" && !bridgable.bridged)
         {
-            collider.GetComponent<PlayerControl>().dead = true;
+            collider.GetComponent<PlayerControl>().Dead = true;
             collider.GetComponent<Animator>().SetBool("Dead", true);
         }
     }

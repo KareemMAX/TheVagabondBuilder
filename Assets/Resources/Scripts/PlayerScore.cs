@@ -11,12 +11,15 @@ public class PlayerScore : MonoBehaviour
     public Text hammerText;
     public Text blackCoinsText;
     public Text bridgesText;
+
+    private Goal goal;
+
     private void Start()
     {
         bridgesText.text = bridge.ToString();
         blackCoinsText.text = blackCoin.ToString();
         hammerText.text = string.Format("{0}/{1}", goldHammer, totalHammers);
-
+        goal = FindObjectOfType<Goal>();
     }
     public float BlackCoin
     {
@@ -41,6 +44,10 @@ public class PlayerScore : MonoBehaviour
         {
             goldHammer = value;
             hammerText.text = string.Format("{0}/{1}", value, totalHammers);
+            if( goldHammer >= totalHammers)
+            {
+                goal.won = true;
+            }
         }
     }
 

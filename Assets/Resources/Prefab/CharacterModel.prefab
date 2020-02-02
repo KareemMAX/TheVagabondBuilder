@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 136839181635570796}
   - component: {fileID: 3226556461376539588}
   - component: {fileID: 2861237323202983479}
+  - component: {fileID: 1888191943236686826}
   - component: {fileID: 229041721565951251}
   m_Layer: 0
   m_Name: CharacterModel
@@ -226,6 +227,21 @@ MonoBehaviour:
   goldHammer: 0
   totalHammers: 3
   bridge: 2
+  hammerText: {fileID: 0}
+  blackCoinsText: {fileID: 0}
+  bridgesText: {fileID: 0}
+--- !u!114 &1888191943236686826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017698573545878824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866d6951f10f1de4cba5c0539ba5ab95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &229041721565951251
 Rigidbody:
   m_ObjectHideFlags: 0

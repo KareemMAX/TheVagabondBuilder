@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -6,11 +7,22 @@ public class PlayerControl : MonoBehaviour
     public int height = 1;
     public float speed = 3;
     public float rotationSpeed = 2.5f;
-    public bool dead;
+    public Image deadWindow;
 
+    private bool dead;
     private Vector3 newPosition;
     private Vector3 newRotation;
     private Animator animator;
+
+    public bool Dead 
+    {
+        get => dead; 
+        set
+        {
+            dead = value;
+            deadWindow.gameObject.SetActive(value);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +45,7 @@ public class PlayerControl : MonoBehaviour
 
     public void GoTo(Vector2 newPos)
     {
-        if (dead) return;
+        if (Dead) return;
         
         newRotation = transform.eulerAngles;
         newRotation.y = getDegree(newPos);
