@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2428980575602895760}
   - component: {fileID: 2428980575602895767}
   - component: {fileID: 2428980575602895788}
+  - component: {fileID: 114275304646411088}
   m_Layer: 0
   m_Name: Trap
   m_TagString: Untagged
@@ -106,8 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedMaterial: {fileID: 2100000, guid: 8ed12db9693c52143a81128ebd90b844, type: 2}
-  bridged: 0
-  bridgeHeight: 0.6
 --- !u!114 &2428980575602895788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,3 +119,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0252f1960b31c64a983061f5f787af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114275304646411088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2428980575602895766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1f14bc71811b240a25e8f5e6f75643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightedMaterial: {fileID: 0}
+  bridged: 0
+  bridgeHeight: 0.5

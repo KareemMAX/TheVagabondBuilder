@@ -106,8 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedMaterial: {fileID: 2100000, guid: 8ed12db9693c52143a81128ebd90b844, type: 2}
-  bridged: 0
-  bridgeHeight: 0.6
 --- !u!114 &1118042454971725259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,4 +120,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlightedMaterial: {fileID: 2100000, guid: 8ed12db9693c52143a81128ebd90b844, type: 2}
   bridged: 0
-  bridgeHeight: 0.6
+  bridgeHeight: 0.5
