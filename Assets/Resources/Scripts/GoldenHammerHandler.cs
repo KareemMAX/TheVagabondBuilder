@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class GoldenHammerHandler : MonoBehaviour
 {
+    public AudioClip audioClip;
+
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     [SerializeField] float amount;
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +22,8 @@ public class GoldenHammerHandler : MonoBehaviour
             if (player != null)
             {
                 player.GoldHammer += amount;
-                Destroy(gameObject);
+                audioSource.Play();
+                GetComponent<MeshRenderer>().enabled = false;
             }
         }
         else if (other.tag == "Bridge")

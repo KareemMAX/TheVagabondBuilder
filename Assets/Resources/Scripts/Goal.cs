@@ -26,7 +26,7 @@ public class Goal : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isNeighbour())
+        if (isNeighbour() && won)
         {
             wonWindow.gameObject.SetActive(true);
         }

@@ -13,6 +13,7 @@ public class PlayerControl : MonoBehaviour
     private Vector3 newPosition;
     private Vector3 newRotation;
     private Animator animator;
+    private AudioSource audioSource;
 
     public bool Dead 
     {
@@ -21,6 +22,7 @@ public class PlayerControl : MonoBehaviour
         {
             dead = value;
             deadWindow.gameObject.SetActive(value);
+            audioSource.Play();
         }
     }
 
@@ -31,6 +33,7 @@ public class PlayerControl : MonoBehaviour
         newPosition = transform.position;
         newRotation = transform.eulerAngles;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
