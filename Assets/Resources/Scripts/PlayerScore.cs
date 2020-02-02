@@ -44,10 +44,7 @@ public class PlayerScore : MonoBehaviour
         {
             goldHammer = value;
             hammerText.text = string.Format("{0}/{1}", value, totalHammers);
-            if( goldHammer >= totalHammers)
-            {
-                goal.won = true;
-            }
+            goal.won = goldHammer >= totalHammers;
         }
     }
 
