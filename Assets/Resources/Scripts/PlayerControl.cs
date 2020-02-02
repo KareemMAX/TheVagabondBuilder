@@ -34,8 +34,18 @@ public class PlayerControl : MonoBehaviour
     public void GoTo(Vector2 newPos)
     {
         if (dead) return;
-        float deg = 0;
+        
+        newRotation = transform.eulerAngles;
+        newRotation.y = getDegree(newPos);
+
+        newPosition = new Vector3(newPos.x, height - 0.5f, newPos.y);
+        position = newPos;
+    }
+
+    public float getDegree(Vector2 newPos)
+    {
         var dir = newPos - position;
+        float deg;
         if (dir == Vector2.up)
             deg = 0;
         else if (dir == Vector2.down)
@@ -57,12 +67,7 @@ public class PlayerControl : MonoBehaviour
         deg += 360;
         deg %= 360;
 
-        newRotation = transform.eulerAngles;
-        newRotation.y = deg;
-
-
-        newPosition = new Vector3(newPos.x, height - 0.5f, newPos.y);
-        position = newPos;
+        return deg;
     }
 
 }

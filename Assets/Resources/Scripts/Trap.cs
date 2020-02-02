@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Trap : MonoBehaviour
 {
-    private Path path;
+    private Bridgeable bridgable;
 
     private void Start()
     {
-        path = GetComponent<Path>();
+        bridgable = GetComponent<Bridgeable>();
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "Player" && !path.bridged)
+        if(collider.gameObject.tag == "Player" && !bridgable.bridged)
         {
             collider.GetComponent<PlayerControl>().dead = true;
             collider.GetComponent<Animator>().SetBool("Dead", true);

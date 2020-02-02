@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8024842084715470578}
   - component: {fileID: 8024842084715470579}
   - component: {fileID: 114746819959911540}
+  - component: {fileID: 1118042454971725259}
   m_Layer: 0
   m_Name: Path
   m_TagString: Untagged
@@ -102,6 +103,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5235f3aaa2a3abf43ac59038b3260593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightedMaterial: {fileID: 2100000, guid: 8ed12db9693c52143a81128ebd90b844, type: 2}
+  bridged: 0
+  bridgeHeight: 0.6
+--- !u!114 &1118042454971725259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024842084715470576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe1f14bc71811b240a25e8f5e6f75643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   highlightedMaterial: {fileID: 2100000, guid: 8ed12db9693c52143a81128ebd90b844, type: 2}

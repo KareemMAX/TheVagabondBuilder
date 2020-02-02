@@ -31776,6 +31776,11 @@ PrefabInstance:
       propertyPath: bridgesText
       value: 
       objectReference: {fileID: 1190621694}
+    - target: {fileID: 2861237323202983479, guid: 364f19afdfbfef44296adb93f3f6389d,
+        type: 3}
+      propertyPath: totalHammers
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7017698573545384200, guid: 364f19afdfbfef44296adb93f3f6389d,
         type: 3}
       propertyPath: m_LocalPosition.x
